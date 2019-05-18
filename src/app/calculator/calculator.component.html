@@ -1,0 +1,33 @@
+<table>
+  <tbody>
+  <tr>
+    <td>Value 1:</td>
+    <td><input [(ngModel)]="value1" class="form-control" type="text"></td>
+  </tr>
+  <tr>
+    <td>Value 2:</td>
+    <td><input [(ngModel)]="value2" class="form-control" type="text"></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>
+      <input (input)="calculate($event)" name="operand" type="radio" value="add">+
+      <input (input)="calculate($event)" name="operand" type="radio" value="subtract">-
+      <input (input)="calculate($event)" name="operand" type="radio" value="multiply">*
+      <input (input)="calculate($event)" name="operand" type="radio" value="divide">/
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Result:
+    </td>
+    <td>{{result}}</td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td><input (click)="clearInput()" class="btn btn-light" type="button" value="Clear"></td>
+  </tr>
+  </tbody>
+</table>
