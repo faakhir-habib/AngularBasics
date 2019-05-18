@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="row"></div>
+    <p>
+      <button (click)="onServerCreation()" [disabled]="!allowAddServer" class="btn btn-primary">Add
+        Server
+      </button>
+      {{serverCreationStatus}}
+      <!-- <br> -->
+      <!-- Value: <input type="text" [value]="allowAddServer"> -->
+      <!-- <br> -->
+      <!-- <p [innerHtml]="allowAddServer"></p> -->
+      <!-- <p *ngIf="allowAddServer">Button is Enabled</p> -->
+      <!-- <p *ngIf="!allowAddServer">Button is Disabled</p> -->
+      <!-- Server with ID {{serverId}} is {{getServerStatus()}} -->
+    </p>
+  </div>
+  <div class="col-md-6">
+    <p>
+
+
+      <!-- <input type="text" (input)="onUpdateServerName($event)"> -->
+      <input [(ngModel)]="serverName" type="text">
+      {{serverName}}
+    </p>
+  </div>
+
+</div>
